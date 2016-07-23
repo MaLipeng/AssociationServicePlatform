@@ -489,3 +489,12 @@ html body * dd.clear
 {
 	display: block;
 }
+
+/*table td align*/
+.left{
+	text-align:left
+}
+
+#pageContent{
+	
+}
