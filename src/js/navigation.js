@@ -9,6 +9,12 @@ function navigate(switcher){
 		break;
 		case 'architecture':url="memberMgr/architecture.html";
 		break;
+		case 'myDetail':url="memberMgr/myDetail.html";
+		break;
+		case 'resetPassword':url="memberMgr/resetPassword.html";
+		break;
+		case 'memberReviewed':url="memberMgr/memberReviewed.html";
+		break;
 	}
 	$("#pageContent").load(url); 
 }

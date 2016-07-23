@@ -3,6 +3,7 @@
 function setTableRowBackGroundColorToDefault() {
 	$(".dataTableRow").each(function () {
 		$(this).css('backgroundColor', 'white')
+		$(this).removeAttr("selected", "false")
 	})
 }
 /*绑定数据表格的单击事件，设置当前的行的背景色*/
@@ -11,9 +12,44 @@ function bindTableRowClick() {
 		$(this).bind("click", function () {
 			setTableRowBackGroundColorToDefault();
 			$(this).css('backgroundColor', 'rgba(128, 128, 128, 0.12)')
-
+			$(this).attr("selected", "true");
 		})
 	})
+}
+function btnAddMember(){
+
+	$('#btnAddMember').live('click', function(e) {
+		$("#memberInfo").load("memberMgr/memberDetail.html");
+		e.preventDefault();
+		$('#memberInfo').reveal($(this).data());
+	});
+}
+
+function btnDelMember(){
+	$("#btnDelMember").bind("click", function(){
+		
+		if (confirm("确认删除？")) {
+			$(".dataTableRow").each(function () {
+				if($(this).attr("selected") == "selected" ){
+					$(this).remove();
+				}
+			})
+		}
+	});
+}
+
+function btnModifyMember(){
+	$("#btnModifyMember").bind("click", function(){
+		
+		alert("btnModifyMember")
+	});
+}
+
+function btnExportMemberList(){
+	$("#btnExportMemberList").bind("click", function(){
+		
+		alert("btnExportMemberList")
+	});
 }
 /*绑定行的双击事件*/
 function bindTableRowDbClick() {
@@ -70,5 +106,12 @@ function bindTableRowDbClick() {
 $(document).ready(function () {
 	bindTableRowClick();
 	bindTableRowDbClick();
+	btnAddMember()
+
+	btnDelMember()
+
+	btnModifyMember()
+
+	btnExportMemberList();
 
 });
