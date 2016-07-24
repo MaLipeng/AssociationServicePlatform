@@ -15,6 +15,12 @@ function navigate(switcher){
 		break;
 		case 'memberReviewed':url="memberMgr/memberReviewed.html";
 		break;
+		case 'sendBox':url="documentMgr/sendBox.html";
+		break;
+		case 'recieveBox':url="documentMgr/recieveBox.html";
+		break;
+		case 'delBox':url="documentMgr/delBox.html";
+		break;
 	}
 	$("#pageContent").load(url); 
 }

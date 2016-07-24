@@ -27,6 +27,7 @@
     <script language="javascript" type="text/javascript" src="js/jqPlot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/jqPlot/plugins/jqplot.highlighter.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/jqPlot/plugins/jqplot.pointLabels.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/navigation.js"></script>
     <!-- END: load jqplot -->
     <script src="js/setup.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -75,20 +76,22 @@
         </div>
         <div class="clear">
         </div>
+
         <div class="grid_2">
+				
             <div class="box sidemenu">
                 <div class="block" id="section-menu">
                     <ul class="section menu">
-						
                         <li class='navL' category='document'><a class="menuitem">公文收发</a>
                             <ul class="submenu">
-                                <li><a>收公文</a> </li>
-                                <li><a>发公文</a> </li>
-                                <li><a>未查看公文</a> </li>
-                                <li><a>查看公文内容</a> </li>
-                                <li><a>收件箱</a> </li>
-                                <li><a>发件箱</a> </li>
-                                <li><a>垃圾箱</a> </li>
+                                <li><a onclick="navigate('recieveBox')">收件箱</a>
+<div id="example_length" class="dataTables_length" style="position: absolute;margin-top: -35px;margin-left: 100px;">
+            <button id="btnAddMember" class="btn-icon btn-teal btn-plus"><span></span>添加公文</button> 
+        </div>
+								</li>
+                                <li><a onclick="navigate('sendBox')">发件箱</a> </li>
+                                <li><a onclick="navigate('delBox')">垃圾箱</a> </li>
+                                <li><a>未读公文</a> </li>
                             </ul>
                         </li>
                         <li class='navL' category='document'><a class="menuitem">公文归档</a>
@@ -108,11 +111,8 @@
                 </div>
             </div>
         </div>
-        <div class="grid_10">
-            <div class="box round first">
-                djaksdjfkaj 
-            </div>
-        </div>
+       <div class="grid_10" id="pageContent" >
+        </div>	
         <div class="clear">
         </div>
     </div>

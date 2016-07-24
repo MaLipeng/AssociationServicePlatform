@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>会员管理 | 浙江省科协省级学会服务平台</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/layout.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
+  <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+  <!-- BEGIN: load jquery -->
+
+  <script src="../js/jquery-1.6.4.min.js" type="text/javascript">
+</script>
+  <script type="../text/javascript" src="js/jquery-ui/jquery.ui.core.min.js">
+</script>
+  <script src="../js/jquery-ui/jquery.ui.widget.min.js" type="text/javascript">
+</script>
+  <script src="../js/jquery-ui/jquery.ui.accordion.min.js" type="text/javascript">
+</script>
+  <script src="../js/jquery-ui/jquery.effects.core.min.js" type="text/javascript">
+</script>
+  <script src="../js/jquery-ui/jquery.effects.slide.min.js" type="text/javascript">
+</script><!-- END: load jquery -->
+  <!-- BEGIN: load jqplot -->
+  <link rel="stylesheet" type="text/css" href="css/jquery.jqplot.min.css" />
+  <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="js/jqPlot/excanvas.min.js"></script><![endif]-->
+
+  <script language="javascript" type="text/javascript" src="js/jqPlot/jquery.jqplot.min.js">
+</script>
+  <script language="javascript" type="text/javascript" src="js/jqPlot/plugins/jqplot.barRenderer.min.js">
+</script>
+  <script language="javascript" type="text/javascript" src="js/jqPlot/plugins/jqplot.pieRenderer.min.js">
+</script>
+  <script language="javascript" type="text/javascript" src="js/jqPlot/plugins/jqplot.categoryAxisRenderer.min.js">
+</script>
+  <script language="javascript" type="text/javascript" src="js/jqPlot/plugins/jqplot.highlighter.min.js">
+</script>
+  <script language="javascript" type="text/javascript" src="js/jqPlot/plugins/jqplot.pointLabels.min.js">
+</script><!-- END: load jqplot -->
+
+  <script language="javascript" type="text/javascript" src="documentMgr/js/dataTable/popLayer.js">
+</script>
+  <script language="javascript" type="text/javascript" src="documentMgr/js/dataTable/dataTable.js">
+</script>
+
+  <script src="../js/setup.js" type="text/javascript">
+</script>
+  <script type="text/javascript">
+</script>
+</head>
+
+<body>
+  <div class="grid_10">
+    <div class="box round first grid">
+      <h2>公文收件箱</h2>
+
+      <div class="block">
+			<div id="example_length" class="dataTables_length">
+            <button id="btnAddDoc" class="btn-icon btn-orange btn-star"><span></span>公文归档</button> 
+			<button id="btnDelMember" class="btn btn-grey btn-cross"><span></span>删除公文</button> 
+          </div>
+          <table class="data display">
+            <thead>
+              <tr>
+				<th class="sorting" rowspan="1" colspan="1" style="width: 20px;"><input id='checkAll' type='checkbox' /></th>
+                <th class="sorting" rowspan="1" colspan="1" style="width: 212px;">编码</th>
+
+                <th class="sorting" rowspan="1" colspan="1" style="width: 264px;">公文标题</th>
+
+                <th class="sorting" rowspan="1" colspan="1" style="width: 126px;">发布时间</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="gradeA even dataTableRow">
+				<th class="center" rowspan="1" colspan="1"><input id='checkRow1' type='checkbox' /></th>
+                <th class="left" rowspan="1" colspan="1">001</th>
+
+                <th class="left" rowspan="1" colspan="1"><b>关于学工1组成立的发文</b></th>
+
+                <th class="left" rowspan="1" colspan="1"><b>2016年7月24日09:24:29</b></th>
+              </tr>
+
+              <tr class="gradeA odd dataTableRow">
+			  <th class="center" rowspan="1" colspan="1"><input id='checkRow2' type='checkbox' /></th>
+                <th class="left" rowspan="1" colspan="1">002</th>
+
+
+                <th class="left" rowspan="1" colspan="1"><b>关于学工1组成立的发文</b></th>
+
+                <th class="left" rowspan="1" colspan="1"><b>2016年7月24日09:24:29</b></th>
+              </tr>
+
+              <tr class="gradeA even dataTableRow">
+				<th class="center" rowspan="1" colspan="1"><input id='checkRow3' type='checkbox' /></th>
+                <th class="left" rowspan="1" colspan="1">003</th>
+
+
+                <th class="left" rowspan="1" colspan="1">关于学工1组成立的发文</th>
+
+                <th class="left" rowspan="1" colspan="1">2016年7月24日09:24:29</th>
+              </tr>
+
+              <tr class="gradeA odd dataTableRow">
+			  <th class="center" rowspan="1" colspan="1"><input id='checkRow4' type='checkbox' /></th>
+                <th class="left" rowspan="1" colspan="1">004</th>
+
+
+                <th class="left" rowspan="1" colspan="1">关于学工1组成立的发文</th>
+
+                <th class="left" rowspan="1" colspan="1">2016年7月24日09:24:29</th>
+              </tr>
+
+              <tr class="gradeA even dataTableRow">
+			  <th class="center" rowspan="1" colspan="1"><input id='checkRow5' type='checkbox' /></th>
+                <th class="left" rowspan="1" colspan="1">005</th>
+
+
+                <th class="left" rowspan="1" colspan="1">关于学工1组成立的发文</th>
+
+                <th class="left" rowspan="1" colspan="1">2016年7月24日09:24:29</th>
+              </tr>
+
+              <tr class="gradeA even dataTableRow">
+			  <th class="center" rowspan="1" colspan="1"><input id='checkRow6' type='checkbox' /></th>
+                <th class="left" rowspan="1" colspan="1">006</th>
+
+                <th class="left" rowspan="1" colspan="1">关于学工1组成立的发文</th>
+
+                <th class="left" rowspan="1" colspan="1">2016年7月24日09:24:29</th>
+              </tr>
+
+              <tr class="gradeA odd dataTableRow">
+			  <th class="center" rowspan="1" colspan="1"><input id='checkRow7' type='checkbox' /></th>
+                <th class="left" rowspan="1" colspan="1">007</th>
+
+                <th class="left" rowspan="1" colspan="1">关于学工1组成立的发文</th>
+
+                <th class="left" rowspan="1" colspan="1">2016年7月24日09:24:29</th>
+              </tr>
+
+              <tr class="gradeA even dataTableRow">
+			  <th class="center" rowspan="1" colspan="1"><input id='checkRow8' type='checkbox' /></th>
+                <th class="left" rowspan="1" colspan="1">008</th>
+
+                <th class="left" rowspan="1" colspan="1">关于学工1组成立的发文</th>
+
+                <th class="left" rowspan="1" colspan="1">2016年7月24日09:24:29</th>
+              </tr>
+
+              <tr class="gradeA odd dataTableRow">
+			  <th class="center" rowspan="1" colspan="1"><input id='checkRow9' type='checkbox' /></th>
+                <th class="left" rowspan="1" colspan="1">009</th>
+
+                <th class="left" rowspan="1" colspan="1">关于学工1组成立的发文</th>
+
+                <th class="left" rowspan="1" colspan="1">2016年7月24日09:24:29</th>
+              </tr>
+
+              <tr class="gradeA even dataTableRow">
+			  <th class="center" rowspan="1" colspan="1"><input id='checkRow10' type='checkbox' /></th>
+                <th class="left" rowspan="1" colspan="1">010</th>
+
+                <th class="left" rowspan="1" colspan="1">关于学工1组成立的发文</th>
+
+                <th class="left" rowspan="1" colspan="1">2016年7月24日09:24:29</th>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="dataTables_info" id="example_info">
+			<label>显示 <select size="1" name="example_length">
+				<option value="10" selected="selected">
+				  10
+				</option>
+
+				<option value="25">
+				  25
+				</option>
+
+				<option value="50">
+				  50
+				</option>
+
+				<option value="100">
+				  100
+				</option>
+			  </select> 条记录</label>
+			   第 1 到 10 条记录 / 100 条记录
+          </div>
+          <div class="dataTables_paginate paging_two_button" id="example_paginate">
+            <div class="paginate_disabled_previous" title="Previous" id="example_previous"></div>
+
+            <div class="paginate_enabled_next" title="Next" id="example_next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
