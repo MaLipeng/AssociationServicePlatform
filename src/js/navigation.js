@@ -19,7 +19,15 @@ function navigate(switcher){
 		break;
 		case 'recieveBox':url="documentMgr/recieveBox.html";
 		break;
+		case 'recieveBoxNotRead':url="documentMgr/recieveBoxNotRead.html";
+		break;
 		case 'delBox':url="documentMgr/delBox.html";
+		break;
+		case 'recieveFiled':url="documentMgr/recieveFiled.html";
+		break;
+		case 'sendFiled':url="documentMgr/sendFiled.html";
+		break;
+		case 'groupMgr':url="documentMgr/groupMgr.html";
 		break;
 	}
 	$("#pageContent").load(url); 

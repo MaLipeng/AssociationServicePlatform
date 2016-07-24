@@ -86,24 +86,27 @@
                             <ul class="submenu">
                                 <li><a onclick="navigate('recieveBox')">收件箱</a>
 <div id="example_length" class="dataTables_length" style="position: absolute;margin-top: -35px;margin-left: 100px;">
-            <button id="btnAddMember" class="btn-icon btn-teal btn-plus"><span></span>添加公文</button> 
+            <button id="btnAddMember" class="btn-icon btn-teal btn-refresh"><span></span>接收公文</button> 
         </div>
 								</li>
-                                <li><a onclick="navigate('sendBox')">发件箱</a> </li>
-                                <li><a onclick="navigate('delBox')">垃圾箱</a> </li>
-                                <li><a>未读公文</a> </li>
+                                <li><a onclick="navigate('sendBox')">发件箱</a> <div id="example_length" class="dataTables_length" style="position: absolute;margin-top: -35px;margin-left: 100px;">
+            <button id="btnAddMember" class="btn-icon btn-teal btn-plus"><span></span>添加公文</button> 
+        </div></li>
+                                <li><a onclick="navigate('delBox')">垃圾箱</a><div id="example_length" class="dataTables_length" style="position: absolute;margin-top: -35px;margin-left: 100px;">
+            <button id="btnAddMember" class="btn-icon btn-teal btn-minus"><span></span>清空</button> 
+        </div> </li>
+                                <li><a onclick="navigate('recieveBoxNotRead')">未读公文</a> </li>
                             </ul>
                         </li>
                         <li class='navL' category='document'><a class="menuitem">公文归档</a>
                             <ul class="submenu">
-                                <li><a>接收公文归档</a> </li>
-                                <li><a>发送公文归档</a> </li>
+                                <li><a onclick="navigate('recieveFiled')">接收公文归档</a> </li>
+                                <li><a onclick="navigate('sendFiled')">发送公文归档</a> </li>
                             </ul>
                         </li>
 						<li class='navL' category='document'><a class="menuitem">群组管理</a>
                             <ul class="submenu"> 
-                                <li><a>新建群组</a> </li>
-                                <li><a>群组管理</a> </li>
+                                <li><a onclick="navigate('groupMgr')">群组管理</a> </li>
                             </ul>
                         </li>
                         
