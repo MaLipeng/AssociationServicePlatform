@@ -1,34 +1,34 @@
-angular.module('starter.services', [])
+var am = angular.module('starter.services', [])
 
-.factory('Chats', function() {
+am.factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
   var chats = [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
+    name: '奥巴马',
+    lastText: '美国总统',
+    face: 'img/aobama.jpg'
   }, {
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
+    name: '普京',
+    lastText: '俄罗斯总统',
+    face: 'img/pujing.jpg'
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
+    name: '索罗斯',
+    lastText: '国际金融巨鳄',
+    face: 'img/suoluosi.jpg'
   }, {
     id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
+    name: '乔布斯',
+    lastText: '乔大爷，苹果创始人',
+    face: 'img/qiaobusi.jpg'
   }, {
     id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
+    name: '扎克尔伯格',
+    lastText: '一个了不起的年轻人',
+    face: 'img/zhakeerboge.jpg'
   }];
 
   return {
@@ -42,6 +42,50 @@ angular.module('starter.services', [])
       for (var i = 0; i < chats.length; i++) {
         if (chats[i].id === parseInt(chatId)) {
           return chats[i];
+        }
+      }
+      return null;
+    }
+  };
+});
+
+am.factory('Groups', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var groups = [{
+    id: 0,
+    name: '协会1',
+    description: '协会1的简介'
+  }, {
+    id: 1,
+    name: '协会2',
+    description: '协会2的简介'
+  }, {
+    id: 2,
+    name: '协会3',
+    description: '协会3的简介'
+  }, {
+    id: 3,
+    name: '协会4',
+    description: '协会4的简介'
+  }, {
+    id: 4,
+    name: '协会5',
+    description: '协会5的简介'
+  }];
+
+  return {
+    all: function() {
+      return groups;
+    },
+    remove: function(group) {
+      groups.splice(groups.indexOf(group), 1);
+    },
+    get: function(groupid) {
+      for (var i = 0; i < groups.length; i++) {
+        if (groups[i].id === parseInt(chatId)) {
+          return groups[i];
         }
       }
       return null;
