@@ -29,6 +29,10 @@ function navigate(switcher){
 		break;
 		case 'groupMgr':url="documentMgr/groupMgr.html";
 		break;
+		case 'createMeeting':url="meetingMgr/createMeeting.html";
+		break;
+		case 'javascript-datatable-binding-to-array':url="meetingMgr/javascript-datatable-binding-to-array.htm";
+		break;
 	}
 	$("#pageContent").load(url); 
 }
