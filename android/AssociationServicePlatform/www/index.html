@@ -23,16 +23,19 @@
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" ng-controller='indexCtrl'>
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
 	<ion-header-bar align-title="left" class="bar-dark">
 		<div class="h1 title">科协协会(5)</div>
 		<div class="buttons">
-		  <button class="button no-animation button-icon icon ion-android-search">
+			<div  href='#/tab/chats'>
+				 <button class="button no-animation button-icon icon ion-android-search">
+			</div>
+		 
 		  </button>
-		  <button class="button no-animation button-icon icon ion-android-add">
+		  <button class="button no-animation button-icon icon ion-android-add" ng-click='add()'>
 		  </button>
 		</div>
 	</ion-header-bar>

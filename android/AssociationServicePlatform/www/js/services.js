@@ -92,3 +92,49 @@ am.factory('Groups', function() {
     }
   };
 });
+
+
+
+am.factory('News', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var news = [{
+    id: 0,
+    title: '新闻1',
+    description: '新闻1的简介'
+  }, {
+    id: 1,
+    title: '新闻2',
+    description: '新闻2的简介'
+  }, {
+    id: 2,
+    title: '新闻3',
+    description: '新闻3的简介'
+  }, {
+    id: 3,
+    title: '新闻4',
+    description: '新闻4的简介'
+  }, {
+    id: 4,
+    title: '新闻5',
+    description: '新闻5的简介'
+  }];
+
+  return {
+    all: function() {
+      return news;
+    },
+    remove: function(n) {
+      title.splice(title.indexOf(n), 1);
+    },
+    get: function(newid) {
+      for (var i = 0; i < news.length; i++) {
+        if (news[i].id === parseInt(newid)) {
+          return news[i];
+        }
+      }
+      return null;
+    }
+  };
+});
