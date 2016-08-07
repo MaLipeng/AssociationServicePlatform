@@ -6,6 +6,12 @@ angular.module('starter.controllers',  ['ionic'])
     Groups.remove(group);
   };	
 })
+.controller('DashSubCtrl', function($scope, Groups) {
+  $scope.groups = Groups.subGroup();
+  $scope.remove = function(group) {
+    Groups.remove(group);
+  };	
+})
 .controller('NewsCtrl', function($scope, News) {
   $scope.news = News.all();
   $scope.remove = function(n) {

@@ -48,7 +48,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-
+  .state('tab.dash-sub', {
+    url: '/dash/:groupId',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-dash.html',
+        controller: 'DashSubCtrl'
+      }
+    }
+  })
   .state('tab.chats', {
       url: '/chats',
       views: {
@@ -76,7 +84,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'AccountCtrl'
       }
     }
-  }).state('tab.news', {
+  })
+  .state('tab.account-about', {
+      url: '/account/about',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-about.html',
+        }
+      }
+    })
+	.state('tab.account-software', {
+      url: '/account/software',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-software.html',
+        }
+      }
+    })
+  .state('tab.news', {
     url: '/news',
     views: {
       'tab-news': {

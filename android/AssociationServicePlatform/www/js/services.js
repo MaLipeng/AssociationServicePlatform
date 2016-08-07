@@ -79,6 +79,19 @@ am.factory('Groups', function() {
     all: function() {
       return groups;
     },
+	subGroup:function(){
+		var subGroup = new Array();
+		for(i = 0;i < groups.length; i+=2){
+			var temp = groups[i]
+			var g = {
+				id: 0,
+				name: temp.name + "下属协会",
+				description: temp.name + '下属协会的简介'
+			}
+			subGroup.push(g)
+		}
+		return subGroup
+	},
     remove: function(group) {
       groups.splice(groups.indexOf(group), 1);
     },
